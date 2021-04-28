@@ -2,9 +2,13 @@
 
 You can do lots of things with this bot, but it gets confusing to remember all the commands, right?
 
-### Markdown
+### Commands
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+#### CommandCategoryPlaceholder
+
+| Command | Required Args | Output |
+|---------|---------------|--------|
+| .ping   |               | Pong!  |
 
 ```markdown
 Syntax highlighted code block
