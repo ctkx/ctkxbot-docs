@@ -6,9 +6,13 @@ You can do lots of things with this bot, but it gets confusing to remember all t
 
 #### CommandCategoryPlaceholder
 
-| Command | Required Args | Output |
-|---------|---------------|--------|
-| .ping   |               | Pong!  |
+| Command | Additional Input     | Output |
+|---------|----------------------|--------|
+| .ping   |                      | Pong!  |
+| .advice | @username (optional) | Gives you advice, or the user you mention |
+| .compliment | @username (optional) | Compliments you, or the user you mention |
+| .shibe | @username (optional) | Sends you a shibe, or the user you mention |
+
 
 ```markdown
 Syntax highlighted code block
