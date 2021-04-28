@@ -1,8 +1,6 @@
-## Welcome to GitHub Pages
+## Welcome to CTKXbot's documentation
 
-You can use the [editor on GitHub](https://github.com/ctkx/ctkxbot-docs/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+You can do lots of things with this bot, but it gets confusing to remember all the commands, right?
 
 ### Markdown
 
