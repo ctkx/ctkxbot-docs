@@ -23,7 +23,8 @@ You can do lots of things with this bot, but it gets confusing to remember all t
 | .shibe | `@username` (optional) | Sends you a shibe, or the user you mention |
 
 ### Games
-
+| Command | Additional Input     | Output |
+|---------|----------------------|--------|
 | .dice | `x` `y` | Rolls `x`dice, with `y` sides |
 | .mines  | `number` | Emoji Minesweeper. Defaults to 10 mines, you can specify between 10 and 30 mines |
 | .flipcoin | | Flip a coin. Heads you win! |
