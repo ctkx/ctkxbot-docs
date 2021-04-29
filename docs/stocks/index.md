@@ -2,6 +2,8 @@
 
 [Back home](../index.md)
 
+Also accepts `.stock` , `.stonk`, `.stonks`
+
 | Command | Additional Input     | Output |
 |---------|----------------------|--------|
 | .stocks | `<symbol>` `1ytarget` 	| 1Y Target (est) |
