@@ -1,4 +1,8 @@
-### Clocks
+# .clock
+
+[Back home](../index.md)
+
+Also accepts `.clocks` , `.clonk`, `.clonks`
 
 | Command  | Additional Input     | Output |
 |----------|----------------------|--------|
