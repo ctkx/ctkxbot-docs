@@ -33,15 +33,15 @@ The stock clocks default to NY Trading hours. You can also specify a country cod
 
 | Command | Additional Input     | Output |
 |---------|----------------------|--------| 
-| .clock  | <type> US / NYSE / NASDAQ | New York |
-| .clock  | <type> CA / TSX           | Toronto |
-| .clock  | <type> UK / LSE           | London |
-| .clock  | <type> DE / FWB           | Frankfurt |
-| .clock  | <type> CN / SSE           | Shanghai |
-| .clock  | <type> JP / JPX           | Tokyo |
-| .clock  | <type> HK / HKEX          | Hong Kong |
-| .clock  | <type> FR / EURONEXT      | Paris | 
-| .clock  | <type> CH / SIX           | Zurich |
+| .clock  | `<mkt_type>` US / NYSE / NASDAQ | New York |
+| .clock  | `<mkt_type>` <type> CA / TSX           | Toronto |
+| .clock  | `<mkt_type>` UK / LSE           | London |
+| .clock  | `<mkt_type>` DE / FWB           | Frankfurt |
+| .clock  | `<mkt_type>` CN / SSE           | Shanghai |
+| .clock  | `<mkt_type>` JP / JPX           | Tokyo |
+| .clock  | `<mkt_type>` HK / HKEX          | Hong Kong |
+| .clock  | `<mkt_type>` FR / EURONEXT      | Paris | 
+| .clock  | `<mkt_type>` CH / SIX           | Zurich |
   
   
 #### Fun
