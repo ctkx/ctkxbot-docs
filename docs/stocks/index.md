@@ -1,6 +1,6 @@
 # Stocks
 
-[Back home](/index.md)
+[Back home](../index.md)
 
 | Command | Additional Input     | Output |
 |---------|----------------------|--------|
