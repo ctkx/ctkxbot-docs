@@ -4,25 +4,19 @@ You can do lots of things with this bot, but it gets confusing to remember all t
 
 ## Commands
 
-[.stocks](/stocks/index.md)
 
-[.clock](/clock/index.md)
+
+
 
 ### General
 
 | Command | Additional Input     | Output |
 |---------|----------------------|--------|
 | .ping   |                      | Pong!  |
+| [.stocks](/stocks/index.md) | [<required args>](/stocks/index.md) | Stock market info |
+| [.clock](/clock/index.md) | [<optional args>](/clock/index.md) | International Clocks |
 | .define | `word`                 | Looks up a word in the dictionary | 
 | .rhyme | `word`                  | Finds rhyming words |
-
-
-
-  
-#### Fun
-
-| Command | Additional Input     | Output |
-|---------|----------------------|--------|
 | .pronounce | `word`              | Attempts to pronounce a word |
 | .advice | `@username` (optional) | Gives you advice, or the user you mention |
 | .compliment | `@username` (optional) | Compliments you, or the user you mention |
