@@ -1,5 +1,7 @@
 # Stocks
+
 [Back home](/index.md)
+
 | Command | Additional Input     | Output |
 |---------|----------------------|--------|
 | .stocks | `<symbol>` `1ytarget` 	| 1Y Target (est) |
