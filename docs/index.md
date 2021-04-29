@@ -13,8 +13,8 @@ You can do lots of things with this bot, but it gets confusing to remember all t
 | Command | Additional Input     | Output |
 |---------|----------------------|--------|
 | .ping   |                      | Pong!  |
-| [.stocks](/stocks/index.md) | [required_args](/stocks/index.md) | Stock market info |
-| [.clock](/clock/index.md) | [optional_args](/clock/index.md) | International Clocks |
+| [.stocks](/stocks/index.md) | [`required_args`](/stocks/index.md) | Stock market info |
+| [.clock](/clock/index.md) | [`optional_args`](/clock/index.md) | International Clocks |
 | .define | `word`                 | Looks up a word in the dictionary | 
 | .rhyme | `word`                  | Finds rhyming words |
 | .pronounce | `word`              | Attempts to pronounce a word |
