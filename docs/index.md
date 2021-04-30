@@ -27,6 +27,6 @@ You can do lots of things with this bot, but it gets confusing to remember all t
 | Command | Additional Input     | Output |
 |---------|----------------------|--------|
 | .dice | `x` `y` | Rolls `x`dice, with `y` sides |
-| .mines  | `number` | Emoji Minesweeper. Defaults to 10 mines, you can specify between 10 and 30 mines |
+| .mines  | `number` | Emoji Minesweeper. Defaults to 10 mines, you can specify between 10 and 30 mines<br> Numbers are optional. Defaults to 1x 6 Sided die|
 | .flipcoin | | Flip a coin. Heads you win! |
 | .hangman | `difficulty` `category` | Hangman (Interactive) <br> Difficulties: <br>`easy` <br>`medium` <br>`hard` <br><br>Categories: <br>`all` <br>`animals` |
