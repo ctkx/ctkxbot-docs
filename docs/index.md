@@ -11,7 +11,7 @@ You can do lots of things with this bot, but it gets confusing to remember all t
 | Command | Additional Input     | Output |
 |---------|----------------------|--------|
 | .ping   |                      | Pong!  |
-| [.mod](/mod/index.md) | [`required_args`](/mod/index.md) | Moderator Functions |
+| [.mod](/mod/index.md) | [`required_args`](/mod/index.md) | [Moderator Functions](/mod/index.md) |
 | [.stocks](/stocks/index.md) | [`required_args`](/stocks/index.md) | Stock market info |
 | [.clock](/clock/index.md) | [`optional_args`](/clock/index.md) | International Clocks |
 | .define | `word`                 | Looks up a word in the dictionary | 
