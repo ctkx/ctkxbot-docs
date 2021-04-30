@@ -20,6 +20,7 @@ You can do lots of things with this bot, but it gets confusing to remember all t
 | .advice | `@username` (optional) | Gives you advice, or the user you mention |
 | .compliment | `@username` (optional) | Compliments you, or the user you mention |
 | .shibe | `@username` (optional) | Sends you a shibe, or the user you mention |
+| .donate | | [If you enjoy the bot, and want to contribute :sparkling_heart:](https://www.buymeacoffee.com/ctkxbot) |
 
 ### Games
 
