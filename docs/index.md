@@ -30,3 +30,10 @@ You can do lots of things with this bot, but it gets confusing to remember all t
 | .mines  | `number` | Emoji Minesweeper. Defaults to 10 mines, you can specify between 10 and 30 mines<br> Numbers are optional. Defaults to 1x 6 Sided die|
 | .flipcoin | | Flip a coin. Heads you win! |
 | .hangman | `difficulty` `category` | Hangman (Interactive) <br> Difficulties: <br>`easy` <br>`medium` <br>`hard` <br><br>Categories: <br>`all` <br>`animals` |
+| .hilo | `number` | Card Game (Interactive) <br>Draw a card and guess if the next card will be higher or lower. Keep going for double or nothing rewards. Order of Cards:<br>`ace (1)`<br>`2-10`<br>`Jack (11)`<br>`Queen (12)`<br>`King (13)`
+
+### Tokens
+
+| Command | Additional Input     | Output |
+|---------|----------------------|--------|
+| .wallet | 					 | Check how many tokens are in your wallet |
