@@ -1,4 +1,4 @@
-## Welcome to CTKXbot's documentation
+## Welcome to CTKXbot's help
 
 You can do lots of things with this bot, but it gets confusing to remember all the commands, right?
 
