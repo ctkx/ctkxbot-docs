@@ -23,6 +23,7 @@ You can do lots of things with this bot, but it gets confusing to remember all t
 | .shibe | `@username` (optional) | Sends you a shibe, or the user you mention |
 
 ### Games
+
 | Command | Additional Input     | Output |
 |---------|----------------------|--------|
 | .dice | `x` `y` | Rolls `x`dice, with `y` sides |
