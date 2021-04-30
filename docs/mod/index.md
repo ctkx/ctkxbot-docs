@@ -22,8 +22,8 @@ You can `add` , `remove` , or `list` alert words:
 
 | Command      | Additional Input | Output                 |
 |--------------|------------------|------------------------|
-| `.mod` | `add` `silent` `alertword` `alertword=silentTriggerWord`   | Adds "silentTriggerWord" as a silent trigger. |
-| `.mod` | `remove` `ban` `alertword` `alertword=warnTriggerWord`   | Removes "banTriggerWord" as a warn trigger. |
+| `.mod` | `add` `silent` `alertword` `alertword=TriggerWord`   | Adds "TriggerWord" as a silent trigger. |
+| `.mod` | `remove` `ban` `alertword` `alertword=TriggerWord`   | Removes "TriggerWord" as a ban trigger. |
 | `.mod` | `list` `warn` `alertword`  | Lists alertwords with warn trigger. |
 
 
