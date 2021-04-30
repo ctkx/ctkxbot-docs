@@ -4,9 +4,7 @@ You can do lots of things with this bot, but it gets confusing to remember all t
 
 ## Commands
 
-
-
-
+[Server/Guild Owner Setup](/guild_setup/index.md) 
 
 ### General
 
