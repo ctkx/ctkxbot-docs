@@ -28,3 +28,24 @@ You can `add` , `remove` , or `list` alert words:
 
 
 
+### Auto Replies
+
+The autoreplies function makes the bot watch the rooms in your server for certain words. When a valid word is detected, the bot sends a randomly selected response from the corresponing reply group. 
+
+Any user can trigger an autoreply, but only moderators can add/remove them. 
+
+To `add` , `remove` , or `list` trigger words:
+
+| Command      | Additional Input | Output                 |
+|--------|------------------------------------------------------------------------------------|--------------------------------------------------|
+| `.mod` | `add` `autoreply` `trigger` `triggerword=.testword` `replygroup=testreplygroup`    | Adds ".testword" to the "testreplygroup" group. |
+| `.mod` | `remove` `autoreply` `trigger` `triggerword=.testword` `replygroup=testreplygroup` | Removes ".testword" from the "testreplygroup" group. |
+| `.mod` | `list` `autoreply` `trigger` `replygroup=testreplygroup`                           | Lists all trigger words for "testreplygroup" | 
+
+To `add` or `remove` replies:
+
+| Command      | Additional Input | Output                 |
+|--------|-------------------------------------------------------------------------------------------------------|--------------------------------------------------|
+| `.mod` | `add` `autoreply` `reply` `replygroup=testreplygroup` `replybegin=``message text here` `=replyend`    | Adds "message text here" to "testreplygroup". <br> All text between `replybegin=` and `=replyend` will be saved. <br>There can be multiple lines of text. |
+| `.mod` | `remove` `autoreply` `reply` `replygroup=testreplygroup` `replybegin=` `message text here` `=replyend`    | Removes "message text here" from "testreplygroup". |
+

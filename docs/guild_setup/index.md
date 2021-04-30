@@ -16,3 +16,5 @@ When the logging room is set, you also need to set which roles in your server ar
 | `.mod_roles` | `list`           | Lists Active Mod Roles |
 | `.mod_roles` | `add` `"Role Name"` | Adds "Role Name" to Bot Mod Roles |
 | `.mod_roles` | `remove` `"Role Name"` | Removes "Role Name" from Bot Mod Roles |
+
+
