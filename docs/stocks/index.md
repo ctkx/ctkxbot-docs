@@ -35,6 +35,20 @@ Also accepts `.stock` , `.stonk`, `.stonks`
 | .stocks | `<symbol>` `stats`		| Stats (Most of the other options) |
 | .stocks | `<symbol>` `vol`			| Volume |
 
+#### Stock Price Alerts
+
+To add an alert :
+
+`.stonkalert <ticker> <above/below> <price>`
+
+Example :
+
+`.stonkalert gme above 347`
+
+Prices are checked every 30 seconds via Yahoo Finance. If your alert threshold is crossed, it will @you in the channel where you originally requested the alert. 
+
+No guarantees provided, you should still keep an eye on things in case the alert doesn't trigger, but I'll do my best to fix any issues if they arise. 
+
 #### Stock Clocks:
 
 Shows the lime left until market period starts or ends.
