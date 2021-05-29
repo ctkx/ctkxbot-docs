@@ -1,0 +1,652 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>CTKXbot</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Welcome</a></li>
+							<li><a href="#modCommands">Moderation Tools</a></li>
+							<li><a href="#generalCommands">General Commands</a></li>
+							<li><a href="#stockCommands">Stocks</a></li>
+							<li><a href="#clockCommands">Clocks</a></li>
+							<li><a href="#gameCommands">Games</a></li>
+
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style3 fullscreen fade-up">
+						<div class="inner">
+							<h1>CTKXbot</h1>
+							<p>A Discord bot that does a lot of things.</p> <!-- <a href="http://html5up.net">HTML5 UP</a><br /> 
+							and released for free under the <a href="http://html5up.net/license">Creative Commons</a>.</p> -->
+							<ul class="actions">
+								<li><a href="#generalCommands" class="button scrolly">Learn more</a></li>
+
+							</ul>
+						</div>
+					</section>
+
+				<!-- modCommands -->
+				<section id="modCommands" class="wrapper style2 spotlights">
+					<section>
+						<div class="content">
+							<div class="inner">
+						<h2>Moderation Tools</h2>
+						<h3>Guild / Server Setup</h3>
+						<p>The .mod commands require some setup which can only be complete by the Server/Guild Owner.<br>First, a Logging Room must be set. It’s recommended to use a room which only your Moderators can see. <br>Get the room’s ID , and send the command: <code>.set_logs_room &lt;room ID&gt;</code><br><br>When the logging room is set, you also need to set which roles in your server are allowed to use the <code>.mod_roles</code> command:</p>
+						<table>
+							<thead>
+							  <tr>
+								<th>Command</th>
+								<th>Additional Input</th>
+								<th>Output</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<td><code>.mod_roles</code></td>
+								<td><code>list</code></td>
+								<td>Lists Active Mod Roles</td>
+							  </tr>
+							  <tr>
+								<td><code>.mod_roles</code></td>
+								<td><code>add</code> <code>"Role Name"</code></td>
+								<td>Adds “Role Name” to Bot Mod Roles</td>
+							  </tr>
+							  <tr>
+								<td><code>.mod_roles</code></td>
+								<td><code>remove</code> <code>"Role Name"</code></td>
+								<td>Removes “Role Name” from Bot Mod Roles</td>
+							  </tr>
+							</tbody>
+						  </table>
+						<h3>Alert words</h3>
+						<p>The alertwords function allows you to have the bot watch for when certain words are posted. <br>There are 3 types of triggers. All messages containing a trigger word will be logged to the Logging Room that you set.<br>The following actions will be taken based on the type of trigger: </p>
+						<table>
+						<colgroup span="3"></colgroup>
+						<tr>
+							<th>Trigger Type</th>
+							<th>Outcome</th>
+						</tr>
+						<tr>
+							<td><code>silent</code></td>
+							<td>No warning is issued and the user does not know about the alert.</td>
+						</tr>
+						<tr>
+							<td><code>warn</code></td>
+							<td>The message is responded to with a public warning, If the user gets enough warnings, they are banned.</td>
+						</tr>
+						<tr>
+							<td><code>ban</code></td>
+							<td>The message is responded to with a public warning, And the user is immediately banned.</td>
+						</tr>
+						</table>
+						<h3>To <code>add</code> , <code>remove</code>, or <code>list</code>  alert words:</h3>
+
+						<table>
+							<colgroup span="3"></colgroup>
+							<tr>
+								<th>Command</th>
+								<th>Additional Input</th>
+								<th>Output</th>
+							</tr>
+							<tr>
+								<td>.mod</td>
+								<td><code>add</code> <code>alertword</code> <code>type</code> <code>alertword=TriggerWord</code></td>
+								<td>Adds <code>TriggerWord</code> as the specified type of alert</td>
+							</tr>
+							<tr>
+								<td>.mod</td>
+								<td><code>remove</code> <code>alertword</code> <code>alertword=TriggerWord</code></td>
+								<td>Removes <code>TriggerWord</code> from any alert type</td>
+							</tr>
+							<tr>
+								<td>.mod</td>
+								<td><code>list</code> <code>alertword</code> <code>type</code></td>
+								<td>Lists trigger words of the specified type.<br>Use this only in your moderator/logging channel,<br>The response will not be obscured.</td>
+							</tr>
+							</table>
+							<h2>Auto Replies</h2>
+							<p>The autoreplies function makes the bot watch the rooms in your server for certain words. When a valid word is detected, the bot sends a randomly selected response from the corresponding reply group. <br> Any user can trigger an autoreply, but only moderators can add/remove them.  </p>
+
+							<h3>To <code>add</code> or <code>remove</code> trigger words:</h3>
+
+							<table>
+								<colgroup span="3"></colgroup>
+								<tr>
+									<th>Command</th>
+									<th>Additional Input</th>
+									<th>Output</th>
+								</tr>
+								<tr>
+									<td>.mod</td>
+									<td><code>add</code> <code>autoreply</code> <code>trigger</code> <code>triggerword=.testword</code> <code>replygroup=testreplygroup</code></td>
+									<td>Adds ".testword" to the <code>testreplygroup</code> group.</td>
+								</tr>
+								<tr>
+									<td>.mod</td>
+									<td><code>remove</code> <code>autoreply</code> <code>trigger</code> <code>triggerword=.testword</code> <code>replygroup=testreplygroup</code></td>
+									<td>Removes ".testword" from the <code>testreplygroup</code> group.</td>
+								</tr>
+
+								</table>
+
+								<h3>To  <code>add</code> or <code>remove</code> replies:</h3>
+
+								<table>
+								<colgroup span="3"></colgroup>
+								<tr>
+									<th>Command</th>
+									<th>Additional Input</th>
+									<th>Output</th>
+								</tr>
+								<tr>
+									<td>.mod</td>
+									<td><code>add</code> <code>autoreply</code> <code>reply</code> <code>replygroup=testreplygroup</code> <code>replybegin=</code></code>message text here</code> <code>=replyend</code></td>
+									<td>Adds "message text here" to "testreplygroup". <br> All text between <code>replybegin=</code> and <code>=replyend</code> will be saved. <br>There can be multiple lines of text.</td>
+								</tr>
+								<tr>
+									<td>.mod</td>
+									<td><code>remove</code> <code>autoreply</code> <code>reply</code> <code>replygroup=testreplygroup</code> <code>replybegin=</code> <code>message text here</code> <code>=replyend</code></td>
+									<td>Removes <code>message text</code> here from <code>testreplygroup</code> group.</td>
+								</tr>
+								</table>
+
+								<h3>To  <code>list</code> corresponding trigger words and reply groups</h3>
+								<table>
+									<colgroup span="3"></colgroup>
+								<tr>
+									<th>Command</th>
+									<th>Additional Input</th>
+									<th>Output</th>
+								</tr>
+								<tr>
+									<td>.mod</td>
+									<td><code>list</code> <code>autoreply</code> <code>trigger</code> <code>replygroup=testreplygroup</code></td>
+									<td>Lists all trigger words for <code>testreplygroup</code></td>
+								</tr>
+								<tr>
+									<td>.mod</td>
+									<td><code>list</code> <code>autoreply</code> <code>replygroup</code> <code>triggerword=.testword</code></td>
+									<td>Shows which group is triggered by <code>.testword</code></td>
+								</tr>
+								</table>
+
+							</div>
+						</div>
+					</section>
+				</section>
+				<!-- generalCommands -->
+				<section id="generalCommands" class="wrapper style3 spotlights">
+					<section>
+						<div class="content">
+							<div class="inner">
+								<h2>General Commands</h2>
+								<h3>General</h3>
+								<table>
+								  <colgroup span="3"></colgroup>
+								  <tr>
+									<th>Command</th>
+									<th>Additional Input</th>
+									<th>Output</th>
+								  </tr>
+								  <!--<tr>
+									<td><a href="#modCommands">.mod</a></td>
+									<td><a href="#modCommands">Mod Commands</a></td>
+									<td>Moderation Tools</td>
+								  </tr>-->
+								  <tr>
+									<td>.chatbot</a></td>
+									<td>A Message</td>
+									<td>Talk to Cassiopeia, an AI Chatbot</td>
+								  </tr>
+								  <tr>
+									<td>.define</td>
+									<td><code>word</code></td>
+									<td>Dictionary Definition of the input <code>word</code></td>
+								  </tr>
+								  <tr>
+									<td>.rhyme</td>
+									<td><code>word</code></td>
+									<td>Words that rhyme with <code>word</code></td>
+								  </tr>
+								  <tr>
+									<td>.pronounce</td>
+									<td><code>word</code></td>
+									<td>Attempts to pronounce a <code>word</code></td>
+								  </tr>
+								  <tr>
+									<td>.advice</td>
+									<td>Optional:<code>@username</code></td>
+									<td>Gives you advice, or the <code>@username</code> you mention.</td>
+								  </tr>
+								  <tr>
+									<td>.compliment</td>
+									<td>Optional:<code>@username</code></td>
+									<td>Compliments you, or the <code>@username</code> you mention.</td>
+								  </tr>
+								  <tr>
+									<td>.shibe</td>
+									<td>Optional:<code>@username</code></td>
+									<td>Sends you, or the <code>@username</code> you mention, a random shibe</td>
+								  </tr>
+								  <tr>
+									<td>.donate</td>
+									<td></td>
+									<td><a href="https://www.buymeacoffee.com/ctkxbot">If you enjoy the bot, and want to contribute</a></td>
+								  </tr>
+								</table>
+
+								<!--<ul class="actions">
+									<li><a href="generic.html" class="button">Learn more</a></li>
+								</ul>-->
+							</div>
+						</div>
+					</section>
+				</section>
+				<section id="stockCommands" class="wrapper style2 spotlights">
+					<section>
+						<div class="content">
+							<div class="inner">
+								<h2>Stock Commands</h2>
+								<p>Also accepts <code>.stock</code>, <code>.stonk</code>, <code>.stonks</code>
+								<table>
+								  <thead>
+									<tr>
+									  <th>Command</th>
+									  <th>Additional Input</th>
+									  <th>Output</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>1ytarget</code></td>
+									  <td>1Y Target (est)</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>52wrange</code></td>
+									  <td>52 Week Range<br>( lowest and highest price at which a stock has traded during the previous 52 weeks. )</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>ask</code></td>
+									  <td>The ask is the lowest price someone is willing to sell a share.</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>avol</code></td>
+									  <td>Average Volume (3 Months)</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>beta</code></td>
+									  <td>Beta compares a stock’s volatility to the rest of the market. <br>A beta greater than 1 means the stock is more volatile than the average <br>A beta less than 1 has less volatility than the average.</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>bid</code></td>
+									  <td>The bid is the highest price someone is willing to pay for a share.</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>borrowed</code></td>
+									  <td>Shows borrow availability, with ETFs</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>dayrange</code></td>
+									  <td>The highest and lowest price the stock has traded for today</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>earnings</code></td>
+									  <td>Last 5 years Revenue &amp; Earnings</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>edate</code></td>
+									  <td>Next Earnings Date</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>eps</code></td>
+									  <td>Earnins per Share</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>exdd</code></td>
+									  <td>Ex-Dividend Date</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>fdy</code></td>
+									  <td>Forward Dividend &amp; Yield</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>ftd</code></td>
+									  <td>Failure to Deliver</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>holders</code></td>
+									  <td>Institutional Holders Info</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>iborrowed</code></td>
+									  <td>Shows borrow availablility.</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>mcap</code></td>
+									  <td>Market Cap</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>open</code></td>
+									  <td>Today’s Open Price</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>optiondates</code></td>
+									  <td>Shows Options Dates</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>options</code></td>
+									  <td>Shows options data</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>options</code>	&lt;<code>puts</code>/<code>calls</code>&gt; <code>yyyy-mm-dd</code> <code>&lt;filter&gt;</code></td>
+									  <td>Shows detailed options data for puts / calls that expire on week ending <code>yyyy-mm-dd</code><br>Filters:<br><code>strikeabove X</code><br><code>strikebelow X</code><br><code>strikebetween X</code></td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>pclose</code></td>
+									  <td>Previous Close Price</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>per</code></td>
+									  <td>Price/Earnings Ratio</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>qearnings</code></td>
+									  <td>Last 4 Quarters Revenue &amp; Earnings</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>shortvol</code></td>
+									  <td>Short Volume</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>ssr</code></td>
+									  <td>Short Sale Restriction</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>stats</code></td>
+									  <td>Stats (Most of the other options)</td>
+									</tr>
+									<tr>
+									  <td>.stocks</td>
+									  <td><code>&lt;ticker&gt;</code> <code>vol</code></td>
+									  <td>Volume</td>
+									</tr>
+								  </tbody>
+								</table>
+								<h4>Stock EOD Predictions</h4>
+								<table>
+								  <thead>
+									<tr>
+									  <th>Command</th>
+									  <th>Additional Input</th>
+									  <th>Outcome</th>
+									</tr>
+								  </thead>	
+									<tbody>
+										<tr>
+										  <td>.closepriceprediction<br>.eodprediction</td>
+										  <td><code>&lt;ticker&gt;</code><code>&lt;price&gt;</code></td>
+										  <td>Register your prediction for today's close price.</td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+										  <td>.showclosepriceprediction<br>.showeodprediction</td>
+										  <td></td>
+										  <td>Show today's EOD price predictions.</td>
+										</tr>
+									</tbody>
+								</table>								
+							</div>
+						</div>
+					</section>
+				</section>
+				<section id="clockCommands" class="wrapper style3 spotlights">
+					<section>
+						<div class="content">
+							<div class="inner">
+								<h2>Clock Commands</h2>
+								<p>Also accepts <code>.clocks</code>, <code>.clonk</code>, <code>.clonks</code>
+								<h4>International Clock</h4>
+									<table>
+									  <thead>
+										<tr>
+										  <th>Command</th>
+										  <th>Additional Input</th>
+										  <th>Output</th>
+										</tr>
+									  </thead>
+									  <tbody>
+										<tr>
+										  <td>.clock</td>
+										  <td></td>
+										  <td>Shows a live clock that lasts for 1 minute.</td>
+										</tr>
+									  </tbody>
+									</table>
+								<h4>Stock Clocks</h4>
+								<p>Shows the lime left until market period starts or ends.</p>
+								<table>
+								  <thead>
+									<tr>
+									  <th>Command</th>
+									  <th>Additional Input</th>
+									  <th>Output</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+									  <td>.clock</td>
+									  <td><code>pm</code></td>
+									  <td>premarket</td>
+									</tr>
+									<tr>
+									  <td>.clock</td>
+									  <td><code>mkt</code></td>
+									  <td>market</td>
+									</tr>
+									<tr>
+									  <td>.clock</td>
+									  <td><code>ph</code></td>
+									  <td>power hour (final hour of day)</td>
+									</tr>
+									<tr>
+									  <td>.clock</td>
+									  <td><code>ah</code>/<code>am</code></td>
+									  <td>after hours/after market</td>
+									</tr>
+								  </tbody>
+								</table>										
+								<p>The stock clocks default to NY Trading hours. You can also specify a country code, or market acronym:</p>
+								<table>
+								  <thead>
+									<tr>
+									  <th>Command</th>
+									  <th>Additional Input</th>
+									  <th>Output</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+									  <td>.clock</td>
+									  <td><code>&lt;mkt_type&gt;</code> <code>US</code> / <code>NYSE</code> / <code>NASDAQ</code></td>
+									  <td>New York</td>
+									</tr>
+									<tr>
+									  <td>.clock</td>
+									  <td><code>&lt;mkt_type&gt;</code> <code>CA</code> / <code>TSX</code></td>
+									  <td>Toronto</td>
+									</tr>
+									<tr>
+									  <td>.clock</td>
+									  <td><code>&lt;mkt_type&gt;</code> <code>UK</code> / <code>LSE</code></td>
+									  <td>London</td>
+									</tr>
+									<tr>
+									  <td>.clock</td>
+									  <td><code>&lt;mkt_type&gt;</code> <code>DE</code> / <code>FWB</code></td>
+									  <td>Frankfurt</td>
+									</tr>
+									<tr>
+									  <td>.clock</td>
+									  <td><code>&lt;mkt_type&gt;</code> <code>CN</code> / <code>SSE</code></td>
+									  <td>Shanghai</td>
+									</tr>
+									<tr>
+									  <td>.clock</td>
+									  <td><code>&lt;mkt_type&gt;</code> <code>JP</code> / <code>JPX</code></td>
+									  <td>Tokyo</td>
+									</tr>
+									<tr>
+									  <td>.clock</td>
+									  <td><code>&lt;mkt_type&gt;</code> <code>HK</code> / <code>HKEX</code></td>
+									  <td>Hong Kong</td>
+									</tr>
+									<tr>
+									  <td>.clock</td>
+									  <td><code>&lt;mkt_type&gt;</code> <code>FR</code> / <code>EURONEXT</code></td>
+									  <td>Paris</td>
+									</tr>
+									<tr>
+									  <td>.clock</td>
+									  <td><code>&lt;mkt_type&gt;</code> <code>CH</code> / <code>SIX</code></td>
+									  <td>Zurich</td>
+									</tr>
+								  </tbody>
+								</table>										
+							</div>
+						</div>
+					</section>
+				</section>
+				<section id="gameCommands" class="wrapper style2 spotlights">
+					<section>
+						<div class="content">
+							<div class="inner">
+							<h2>Games</h2>
+							<table>
+								<thead>
+								  <tr>
+									<th>Command</th>
+									<th>Output</th>
+								  </tr>
+								</thead>
+								<tbody>
+								  <tr>
+									<td>.wallet</td>
+									<td>Check how many tokens are in your wallet</td>
+								  </tr>
+								</tbody>
+							</table>
+
+							<table>
+							  <thead>
+								<tr>
+								  <th>Command</th>
+								  <th>Additional Input</th>
+								  <th>Output</th>
+								</tr>
+							  </thead>
+							  <tbody>
+								<tr>
+								  <td>.dice</td>
+								  <td><code>x</code> <code>y</code></td>
+								  <td>Rolls <code>x</code>dice, with <code>y</code> sides</td>
+								</tr>
+								<tr>
+								  <td>.mines</td>
+								  <td><code>number</code></td>
+								  <td>Emoji Minesweeper. Defaults to 10 mines, you can specify between 10 and 30 mines<br> Numbers are optional. Defaults to 1x 6 Sided die</td>
+								</tr>
+								<tr>
+								  <td>.flipcoin</td>
+								  <td>&nbsp;</td>
+								  <td>Flip a coin. Heads you win!</td>
+								</tr>
+								<tr>
+								  <td>.hangman</td>
+								  <td><code>difficulty</code> <code>category</code></td>
+								  <td>Hangman (Interactive) <br> Difficulties: <br><code>easy</code> <br><code>medium</code> <br><code>hard</code> <br><br>Categories: <br><code>all</code> <br><code>animals</code></td>
+								</tr>
+								<tr>
+								  <td>.hilo</td>
+								  <td><code>number</code></td>
+								  <td>Card Game (Interactive) <br>Draw a card and guess if the next card will be higher or lower. Keep going for double or nothing rewards. Order of Cards:<br><code>ace (1)</code><br><code>2-10</code><br><code>Jack (11)</code><br><code>Queen (12)</code><br><code>King (13)</code></td>
+								</tr>
+							  </tbody>
+							</table>
+							</div>
+						</div>
+					</section>
+				</section>
+			</div>
+
+		<!-- Footer 
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+			-->
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
