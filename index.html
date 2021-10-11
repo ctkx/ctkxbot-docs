@@ -32,6 +32,7 @@
 							<li><a href="#intro">Welcome</a></li>
 							<li><a href="#modCommands">Moderation Tools</a></li>
 							<li><a href="#generalCommands">General Commands</a></li>
+							<li><a href="#twitterCommands">Twitter</a></li>
 							<li><a href="#stockCommands">Stocks</a></li>
 							<li><a href="#clockCommands">Clocks</a></li>
 							<li><a href="#gameCommands">Games</a></li>
@@ -65,7 +66,7 @@
 							<div class="inner">
 						<h2>Moderation Tools</h2>
 						<h3>Guild / Server Setup</h3>
-						<p>The .mod commands require some setup which can only be complete by the Server/Guild Owner.<br>First, a Logging Room must be set. It’s recommended to use a room which only your Moderators can see. <br>Get the room’s ID , and send the command: <code>.set_logs_room &lt;room ID&gt;</code><br><br>When the logging room is set, you also need to set which roles in your server are allowed to use the <code>.mod_roles</code> command:</p>
+						<p>The <code>.mod</code> commands require some setup which can only be completed by the Server/Guild Owner.<br>First, a Logging Room must be set. It’s recommended to use a room which only your Moderators can see. <br>Get the room’s ID , and send the command: <code>.set_logs_room &lt;room ID&gt;</code><br><br>When the logging room is set, you then need to set which roles in your server are allowed to use the moderation tools, using the <code>.mod_roles</code> command:</p>
 						<table>
 							<thead>
 							  <tr>
@@ -276,7 +277,38 @@
 						</div>
 					</section>
 				</section>
-				<section id="stockCommands" class="wrapper style2 spotlights">
+				<section id="twitterCommands" class="wrapper style2 spotlights">
+					<section>
+						<div class="content">
+							<div class="inner">
+								<h2>Twitter</h2>
+								<p> The <code>.twittersub</code> and <code>.twitterunsub</code> command require moderator roles to be set up with the bot. Please reference <li><a href="#modCommands">Moderation Tools</a></li> for setup instructions </p><br><br>
+								<p> If the @twitter_handle matches a discord username, the command will fail. To avoid this, surround the @twitter_handle with backticks: <code>`@twitter_handle`</code></p>
+								<table>
+								  <thead>
+									<tr>
+									  <th>Command</th>
+									  <th>Additional Input</th>
+									  <th>Output</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+									  <td>.twittersub</td>
+									  <td><code>@twitter_handle</code> <code>#discord_text_channel</code> Optional:<code>noreplies</code></td>
+									  <td>Posts every tweet from @twitter_handle to #discord_text_channel. If <code>noreplies</code> is specified then tweets which are replies to other tweets will be ignored</td>
+									</tr>
+									<tr>
+										<td>.twitterunsub</td>
+										<td><code>@twitter_handle</code></td>
+										<td>Stops tweets being posted from @twitter_handle to all text channels in the discord server.</td>
+									  </tr>
+								</table>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section id="stockCommands" class="wrapper style3 spotlights">
 					<section>
 						<div class="content">
 							<div class="inner">
@@ -493,7 +525,7 @@
 						</div>
 					</section>
 				</section>
-				<section id="clockCommands" class="wrapper style3 spotlights">
+				<section id="clockCommands" class="wrapper style2 spotlights">
 					<section>
 						<div class="content">
 							<div class="inner">
@@ -669,7 +701,7 @@
 							</div>
 						</div>
 					</section>
-					<section id="memeCommands" class="wrapper style3 spotlights">
+					<section id="memeCommands" class="wrapper style2 spotlights">
 						<section>
 							<div class="content">
 								<div class="inner">
